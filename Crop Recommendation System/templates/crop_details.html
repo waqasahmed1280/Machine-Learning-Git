@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ crop.name }} Details</title>
+</head>
+<body>
+    <h1>{{ crop.name }}</h1>
+    <p><strong>Description:</strong> {{ crop.description }}</p>
+    <p><strong>Additional Info:</strong> {{ crop.additional_info }}</p>
+
+    <h2>Recommended Pesticides</h2>
+    <ul>
+        {% for pesticide in crop.pesticides %}
+            <li><strong>{{ pesticide.name }}</strong>: {{ pesticide.description }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

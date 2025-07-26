@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About - Smart Farming Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #181818;
+        color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: #222;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar-brand {
+        color: #f3a847 !important;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+
+      .navbar-nav .nav-link {
+        color: #f3f3f3 !important;
+        font-weight: 600;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #f3a847 !important;
+      }
+
+      .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 30px;
+        text-align: center;
+      }
+
+      .content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #f3f3f3;
+        margin-bottom: 30px;
+      }
+
+      .content p {
+        font-size: 1.15rem;
+        color: #d0d0d0;
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .team-members {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 40px;
+        flex-wrap: wrap;
+      }
+
+      .team-member {
+        background: #2a2a2a;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        padding: 30px 20px;
+        margin: 20px;
+        width: 280px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .team-member img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+      }
+
+      .team-member img:hover {
+        transform: scale(1.1);
+      }
+
+      .team-member h3 {
+        font-size: 1.6rem;
+        color: #f3f3f3;
+        margin-bottom: 10px;
+      }
+
+      .team-member p {
+        font-size: 1rem;
+        color: #b3b3b3;
+      }
+
+      footer {
+        background-color: #222;
+        color: #f3f3f3;
+        padding: 25px;
+        text-align: center;
+      }
+
+      footer a {
+        color: #f3a847;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Media Queries for responsiveness */
+      @media (max-width: 768px) {
+        .team-members {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .content h1 {
+          font-size: 2.5rem;
+        }
+
+        .content p {
+          font-size: 1.1rem;
+        }
+
+        .team-member {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+          🌾 Crop Recommendation
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+ <a class="nav-link" href="{{ url_for('eval') }}">Evaluation</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+      <h1>About Us</h1>
+      <p>We are a passionate team of students working on a Smart Farming Assistant to empower farmers with data-driven insights for crop selection and farming optimization.</p>
+      
+      <p>This project is a collaborative effort from the following team members:</p>
+
+      <div class="team-members">
+        <!-- Istaqbal Mehdi -->
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='mehdii.jpg') }}" alt="Istaqbal Mehdi" style="">
+
+          <hr>
+          <br>
+          <h3>ISTAQBAL MEHDI</h3>
+          <p>Team Lead</p>
+        </div>
+        
+        <!-- Hareem Zahra -->
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='harreem.jpg') }}" alt="Hareem Zahra">
+          <hr>
+          <br>
+          <h3>HAREEM ZAHRA</h3>
+          <p>Designer</p>
+        </div>
+
+        <!-- Riffat Batool -->
+        <div class="team-member">
+          <img src="{{ url_for('static', filename='riffat.jpg') }}" alt="Riffat Batool">
+          <hr>
+          <br>
+          <h3>RIFFAT BATOOL</h3>
+          <p>Research Analyst</p>
+        </div>
+      </div>
+<br><br>
+      <p>Our team is committed to developing a solution that not only meets academic requirements but also contributes meaningfully to the agricultural sector.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Smart Farming Assistant. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
